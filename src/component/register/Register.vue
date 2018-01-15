@@ -1,6 +1,6 @@
 <template>
     <div>
-        注册页面
+        我也不知道我在干嘛
     </div>
 </template>
 
