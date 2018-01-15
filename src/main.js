@@ -7,7 +7,18 @@ Vue.use(VueRouter);
 
 // 2.1 导入自己写的根组件
 import App from "./component/App.vue";
-import routerCongig from "./router/index.js"
+import routerConfig from "./router/index.js"
+
+// 导入axios
+import axios from "axios";
+// 改用域名
+axios.defaults.baseURL = "http://157.122.54.189:9095";
+// 加入原型中
+Vue.prototype.$http = axios;
+
+// 导入自己写的配置对象，为方便使用，也将其加入原型链中
+import api from "./js/api-config.js"
+Vue.prototype.$api = api;
 
 // 把根组件渲染到指定视图
 new Vue({
@@ -15,5 +26,5 @@ new Vue({
     render: function(createElement) {
         return createElement(App);
     },
-    router:new VueRouter(routerCongig)
+    router:new VueRouter(routerConfig)
 });
