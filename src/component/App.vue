@@ -1,8 +1,7 @@
 <template>
     <div>
-        公共头部
-        <router-view></router-view>
-        公共底部
+        <!-- app -->
+        <router-view></router-view>        
     </div>
 </template>
 
@@ -13,5 +12,8 @@
 </script>
 
 <style scoped>
-
+    div{
+        height:100%;
+        background-color:rgb(52, 75, 92)
+    }
 </style>
